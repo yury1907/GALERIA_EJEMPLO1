@@ -1,40 +1,124 @@
+/* PUNTO 11: Fuente personalizada */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
+body {
   font-family: "Montserrat", sans-serif;
 }
-.contenedor{
+
+/* PUNTO 3, 4, 5, 6, 7, 16 */
+.contenedor {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("fondo.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 90vw;
+  height: 80vh;
 }
-.card{
+
+/* PUNTO 14: Márgenes y paddings con em */
+.card {
   width: 320px;
-  background-color: #f2f2f2;
-  padding: 10px;
-  margin: 10px;
+  margin: 2em;
+  padding: 1.5em;
   border-radius: 8px;
   border: solid 0.5px #cbc3c3;
   display: inline-block;
+  background-color: #f2f2f2;
 }
-.card img{
+
+/* PUNTO 17, 18: Imagenes responsivas + object-fit */
+.card img {
   display: block;
-  max-height: 280px;
+  max-width: 100%;
+  height: auto;
   margin: 16px auto;
   filter: drop-shadow(2px 0px 8px #515151);
+  object-fit: cover;
 }
-.card h2{
+
+/* PUNTO 13: Unidades rem */
+.card p {
+  font-size: 1.2rem;
+  color: #515151;
+  text-align: center;
+}
+
+/* Títulos */
+.card h2 {
   margin-top: 2px;
   margin-bottom: 8px;
   color: #373737;
   text-align: center;
 }
-.card p{
+
+
+/* PUNTO 1: Colores hexadecimales */
+.card:nth-child(1) {
+  background-color: #ff5733;
+  color: #333333;
+}
+
+/* PUNTO 2: RGB en 5 cards */
+.card:nth-child(2) {
+  background-color: rgb(135, 206, 250);
+  color: rgb(25, 25, 112);
+}
+.card:nth-child(3) {
+  background-color: rgb(144, 238, 144);
+  color: rgb(0, 100, 0);
+}
+.card:nth-child(4) {
+  background-color: rgb(255, 182, 193);
+  color: rgb(139, 0, 139);
+}
+.card:nth-child(5) {
+  background-color: rgb(255, 255, 224);
+  color: rgb(128, 128, 0);
+}
+.card:nth-child(6) {
+  background-color: rgb(240, 128, 128);
+  color: rgb(178, 34, 34);
+}
+
+/* PUNTO 8: Gradiente lineal */
+.card:nth-child(7) {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+/* PUNTO 9: Gradiente radial */
+.card:nth-child(8) {
+  background: radial-gradient(circle, #6a11cb, #2575fc);
+  color: white;
+}
+
+/* PUNTO 10: Estilos de texto */
+.card:nth-child(9) h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* PUNTO 12: Font-size, style y weight */
+.card:nth-child(10) p {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* PUNTO 15: Comparación px, em, rem */
+.card:nth-child(11) {
   font-size: 16px;
-  color: #515151;
-  text-align: center;
+  padding: 20px;  /* px */
+  margin: 2em;    /* em */
+}
+.card:nth-child(11) p {
+  font-size: 1.5rem; /* rem */
 }
